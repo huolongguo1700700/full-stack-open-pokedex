@@ -6,9 +6,11 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "start-prod": "node app.js",
-    "test": "jest",
+    "test": "jest --verbose --runInBand",
     "eslint": "eslint './**/*.{js,jsx}'",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "cypress:open": "cypress open",
+    "test:e2e": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -33,7 +35,9 @@
     "babel-jest": "^25.5.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.5.3",
+    "cypress": "^10.2.0",
     "eslint": "^6.8.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-jest": "^23.11.0",
     "eslint-plugin-react": "^7.19.0",
     "html-loader": "^1.1.0",
@@ -45,7 +49,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@testing-library/user-event": "^14.2.3",
     "axios": "^0.19.2",
+    "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
