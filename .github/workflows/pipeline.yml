@@ -35,3 +35,4 @@ jobs:
           heroku_email: "e1700700@edu.vamk.fi"
           healthcheck: https://full-sstack-open-pokedex.herokuapp.com/health
           checkString: "ok"
+          rollbackonhealthcheckfailed: true
